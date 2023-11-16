@@ -12,23 +12,14 @@ public class TheaterController : MonoBehaviour
 
     private int selected = -1;
 
-    public void enableObject(GameObject obj)
-    {
-        obj.SetActive(true);
-    }
-
-    public void disableObject(GameObject obj)
-    {
-        obj.SetActive(false);
-    }
 
     public void enterTheaterMode()
     {
         // disable theater button
-        disableObject(firstLevelUI);
+        firstLevelUI.SetActive(false);
 
         // enable theater option ui
-        enableObject(theaterOptionUI);
+        theaterOptionUI.SetActive(true);
     }
 
     public void selectTheaterMode()
@@ -41,8 +32,8 @@ public class TheaterController : MonoBehaviour
             print(selected);
 
             // replace startTheaterBtn with StopTheaterBtn
-            disableObject(startTheaterBtn);
-            enableObject(stopTheaterBtn);
+            startTheaterBtn.SetActive(false);
+            stopTheaterBtn.SetActive(true);
 
             // change the button text
             TextMeshProUGUI stopTheaterBtnText = stopTheaterBtn.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
@@ -51,10 +42,10 @@ public class TheaterController : MonoBehaviour
         }
 
         // disable theater option ui
-        disableObject(theaterOptionUI);
+        theaterOptionUI.SetActive(false);
 
         // enable first level UI
-        enableObject(firstLevelUI);
+        firstLevelUI.SetActive(true);
 
         // reset selected index
         selected = -1;
@@ -66,32 +57,32 @@ public class TheaterController : MonoBehaviour
         selected = -1;
 
         // replace the stopTheaterBtn with startTheaterBtn
-        disableObject(stopTheaterBtn);
-        enableObject(startTheaterBtn);
+        stopTheaterBtn.SetActive(false) ;
+        startTheaterBtn.SetActive(true) ;
 
         // TODO: add code here to go from theater mode to regular mode
         print("exiting theater mode: " + selected.ToString());
     }
 
-    // listener for the first skybox material button
+    // callback func for the first skybox material button
     public void selectFirst()
     {
         selected = 1;
         selectTheaterMode();
     }
-    // listener for the second skybox material button
+    // callback func for the second skybox material button
     public void selectSecond()
     {
         selected = 2;
         selectTheaterMode();
     }
-    // listener for the third skybox material button
+    // callback func for the third skybox material button
     public void selectThird()
     {
         selected = 3;
         selectTheaterMode();
     }
-    // listener for the go back button
+    // callback func for the go back button
     public void goBack()
     {
         selectTheaterMode();
