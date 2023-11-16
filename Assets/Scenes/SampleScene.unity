@@ -473,9 +473,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1988654364}
-        m_TargetAssemblyTypeName: TheaterController, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1988654366}
+        m_TargetAssemblyTypeName: SplitStudentController, Assembly-CSharp
+        m_MethodName: splitIndividual
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -816,7 +816,7 @@ Transform:
   m_GameObject: {fileID: 271706703}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.091248, y: 14.869614, z: 0.13462031}
+  m_LocalPosition: {x: 39.091248, y: 0.5520172, z: 0.13462031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -860,7 +860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 363, y: 2}
+  m_AnchoredPosition: {x: 363, y: -12.317596}
   m_SizeDelta: {x: 160, y: 54.7704}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301923158
@@ -906,7 +906,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 301923159}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1988654366}
+        m_TargetAssemblyTypeName: SplitStudentController, Assembly-CSharp
+        m_MethodName: enterSplitMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &301923159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,9 +1173,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1988654364}
-        m_TargetAssemblyTypeName: TheaterController, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1988654366}
+        m_TargetAssemblyTypeName: SplitStudentController, Assembly-CSharp
+        m_MethodName: splitPair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3443,7 +3455,7 @@ Transform:
   m_GameObject: {fileID: 1128982378}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.43948, y: 6.3175964, z: -0.31565642}
+  m_LocalPosition: {x: 70.43948, y: -8, z: -0.31565642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3534,9 +3546,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1988654364}
-        m_TargetAssemblyTypeName: TheaterController, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1988654366}
+        m_TargetAssemblyTypeName: SplitStudentController, Assembly-CSharp
+        m_MethodName: goBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3703,9 +3715,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1988654364}
-        m_TargetAssemblyTypeName: TheaterController, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1988654366}
+        m_TargetAssemblyTypeName: SplitStudentController, Assembly-CSharp
+        m_MethodName: splitAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4666,6 +4678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d13bae6a1be3d4c983bb01a408f2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstLevelUI: {fileID: 1190082444}
+  splitStudentUI: {fileID: 1651127886}
+  studentPanel: {fileID: 1776349604}
 --- !u!114 &1988654367
 MonoBehaviour:
   m_ObjectHideFlags: 0
